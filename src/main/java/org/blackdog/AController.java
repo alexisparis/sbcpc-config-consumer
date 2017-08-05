@@ -11,22 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by para042 on 2017-07-26.
  */
 @RestController
-@RefreshScope
+//@RefreshScope
 public class AController {
 
 
-  @Value("${health.config.enabled}")
+  @Value("${group1.b}")
   private String message;
-
-  @Autowired
-  private Environment env;
-
 
   @RequestMapping("/")
   String getMessage() {
-
-            System.out.println("env : " + env.getProperty("spring.cloud.config.server.git.uri"));
-            System.out.println("message : " + message);
-    return "toto";
+    return "toto " + message;
   }
 }

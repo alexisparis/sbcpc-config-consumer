@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by para042 on 2017-07-26.
  */
 @RestController
-//@RefreshScope
+@RefreshScope
 public class AController {
 
 
